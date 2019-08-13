@@ -47,9 +47,9 @@
               "src/assets"
             ],
             "styles": [
-                "../node_modules/bootstrap/dist/css/bootstrap.css",
-                "styles.scss"
-            ]
+              "../posts/node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
