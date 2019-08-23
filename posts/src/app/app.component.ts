@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-root',
@@ -6,26 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'posts';
-  
-  posts = [
-  {
-  title: 'Mon premier post',
-  content: 'La Cigale ayant chanté tout l’été se trouva fort dépourvue quand la bise fut venue. Pas un seul petit morceau de mouche ou de vermisseau. Elle alla crier famine chez la Fourmi sa voisine la priant de lui prêter quelque grain pour subsister jusqu à la saison nouvelle...',
-  loveIts: 0,
-  created_at: new Date()
-  },
-  {
-  title: 'Mon deuxième post',
-  content: 'La Cigale ayant chanté tout l’été se trouva fort dépourvue quand la bise fut venue. Pas un seul petit morceau de mouche ou de vermisseau. Elle alla crier famine chez la Fourmi sa voisine la priant de lui prêter quelque grain pour subsister jusqu à la saison nouvelle...',
-  loveIts: 0,
-  created_at: new Date()
-  },
-  {
-  title: 'Encore un post',
-  content: 'La Cigale ayant chanté tout l’été se trouva fort dépourvue quand la bise fut venue. Pas un seul petit morceau de mouche ou de vermisseau. Elle alla crier famine chez la Fourmi sa voisine la priant de lui prêter quelque grain pour subsister jusqu à la saison nouvelle...',
-  loveIts: 0,
-  created_at: new Date()
+  titre = 'posts';
+  constructor(){
+    var firebaseConfig = {
+      apiKey: "AIzaSyDAYEdN5UcXrfzHl9vElK6JjB1NMHQARw0",
+      authDomain: "posts-a5ba8.firebaseapp.com",
+      databaseURL: "https://posts-a5ba8.firebaseio.com",
+      projectId: "posts-a5ba8",
+      storageBucket: "",
+      messagingSenderId: "384783854146",
+      appId: "1:384783854146:web:966024a0c704f3d2"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
   }
-  ];
+
+
 }
